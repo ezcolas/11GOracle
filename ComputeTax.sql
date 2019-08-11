@@ -4,6 +4,7 @@
  salary.
 */
 
+-- Created the table
 CREATE TABLE employees(
   socialsecurityno VARCHAR2(11) CONSTRAINT emp_emp_id_pk PRIMARY KEY,
   name VARCHAR2(60),
@@ -53,8 +54,9 @@ BEGIN
   END LOOP;
 END;
 
+-- Execute the Store procedure
 Exec compute_tax;
 
 Select * from tax;
 
-DROP procedure compute_tax;
+
