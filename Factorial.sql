@@ -7,7 +7,7 @@
 SET SERVEROUTPUT ON
 
 DECLARE
-  n Integer :=-4;
+  n Integer :=10;
   o Integer :=1;
 BEGIN
   IF n < 0 THEN 
@@ -22,7 +22,7 @@ BEGIN
 END;
 /
 
--- Named Block
+-- Named Block - Procedure
 CREATE PROCEDURE facto (
   n_input INTEGER
 )
@@ -41,8 +41,6 @@ BEGIN
   END IF;
 END;
   
-Begin
-  facto(6);
-END;
 
-Exec facto(6);
+-- Execute factorial of 10
+Execute facto(10);
